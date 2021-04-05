@@ -1,6 +1,18 @@
 
-.btn{
-    margin-left: 20em;
-    border: 3px solid #4433d1;
-    padding: 1em;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+.a1 {
+    font-family: 'Raleway' , sans-serif;
+    color: #ff5e00;
+}
+
+.imgWidth {
+    max-width: 100%;
+    height: 35px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
