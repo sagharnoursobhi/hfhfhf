@@ -80,8 +80,50 @@ body {
   left: 50%;
 }
 
-.exrtaBorder{
+.extraBorder{
   border-right: 7px solid orange;
   border-bottom: 7px solid orange;
   margin-top: 3em;
+  background-color: rgb(249, 249, 249);
+  height: 22em;
+}
+
+.margin{
+  margin-top: 20px;
+}
+
+.style{
+  height: 7em;
+}
+
+.col-7{
+  vertical-align: middle;
+  margin: 40px auto;
+}
+
+.list{
+  background-color: rgb(249, 249, 249);
+}
+.margin1{
+  margin-left: 10px;
+}
+
+.margin2{
+  margin-top: 4em;
+  height: 7em;
+  border: 5px solid;
+}
+
+.margin3{
+  margin-top: 3em;
+  -webkit-text-stroke-width: medium;
+  color: rgb(255, 89, 0);
+}
+
+.margin4{
+  margin-top: 40px;
+}
+
+.icon-color{
+  color: rgb(255, 89, 0);
 }
