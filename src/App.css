@@ -127,3 +127,16 @@ body {
 .icon-color{
   color: rgb(255, 89, 0);
 }
+
+/*a.link1:link , a.link1:visited{
+  text-decoration: none;
+  color: black;
+}
+
+  a.link1:hover{
+  background-color:green;
+  color:white;
+  cursor: pointer;
+  
+}*/
+
