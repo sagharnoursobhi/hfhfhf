@@ -35,7 +35,7 @@ function Cars() {
     return (
         <>
             <NavbarApp />
-            <NavbarSecond />
+            <NavbarSecond className="border border-dark" />
             <div className="container-fluid">
                 <section id="section1">
                     <div className="row justify-content-center align-items-center d-flex">

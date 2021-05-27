@@ -24,9 +24,10 @@ import NavbarApp from '../Navbar';
 import NavbarSecond from '../NavbarSecond';
 import Footer from '../Footer'
 
+
 const App = () => (
     <i>
-      <FontAwesomeIcon icon={faHome} />
+      <FontAwesomeIcon icon={faHome}/>
     </i>
   );
 function Landing(){
@@ -38,7 +39,7 @@ function Landing(){
                     <div className="container-fluid" id="main">
                         <div className="row">
                             <div className="col-lg-12 col-xs-12 col-sm-6 col-md-8 position-relative text-center text-white w-100">
-                                <img src={LandingPage} alt="LandingPage" className="img-fluid w-100"/>
+                                <img src={LandingPage} alt="LandingPage" className="img-fluid w-100 landing h-auto"/>
                                 <div className="position-absolute transform blur mw-100 mh-100 w-100">
                                 <ul className="list-unstyled">
                                     <h3 className="text-danger">Dream car rental</h3>
@@ -53,19 +54,19 @@ function Landing(){
                                     <div className="container-fluid">
                                         <div className="row">
                                             <div className="col-12 style ">
-                                                <div className="col-7"><h4 className="text-center">Porsche 911 Carrera 4s</h4></div>
+                                                <div className="col-7 h4-media"><h4 className="text-center">Porsche 911 Carrera 4s</h4></div>
                                             </div>
                             </div>
-                            <div className="row">
-                                <div className="col-6 margin">
-                                    <img src={FirstCar} alt="firstCar"/>
+                            <div className="row margin-row">
+                                <div className="col-xl-6 col-lg col-xs-12 margin">
+                                    <img src={FirstCar} alt="firstCar" className="img-media"/>
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-auto media">
                                     <ul class="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Red</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">450 Hourses</span></li>
+                                        <li className="list-group-item border-0 list svg-media"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list svg-media"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list svg-media"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Red</span></li>
+                                        <li className="list-group-item border-0 list svg-media"><span><App className="icon"/></span><span className="margin1 media-text">450 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -82,12 +83,12 @@ function Landing(){
                                 <div className="col-6 margin">
                                     <img src={SecondCar} alt="firstCar"/>
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-100 media">
                                     <ul className="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Yellow</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">300 Hourses</span></li>
+                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Yellow</span></li>
+                                        <li className="list-group-item border-0 list"><span><App className="icon"/></span><span className="margin1 media-text">300 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -104,14 +105,14 @@ function Landing(){
                             </div>
                             <div className="row justify-content-center align-items-center d-flex">
                                 <div className="col-6 margin">
-                                    <img src={ThirdCar} alt="firstCar"/>
+                                    <img src={ThirdCar} alt="firstCar" className="img-media"/>
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-100 media">
                                     <ul className="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Gold</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">421 Hourses</span></li>
+                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Gold</span></li>
+                                        <li className="list-group-item border-0 list"><span><App className="icon"/></span><span className="margin1">421 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -126,14 +127,14 @@ function Landing(){
                             </div>
                             <div className="row">
                                 <div className="col-6 margin">
-                                    <img src={FourthCar} alt="firstCar"/>
+                                    <img src={FourthCar} alt="firstCar" className="img-media"/>
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-100 media">
                                     <ul className="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Blue</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">625 Hourses</span></li>
+                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Blue</span></li>
+                                        <li className="list-group-item border-0 list"><span><App className="icon"/></span><span className="margin1 media-text">625 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -150,14 +151,14 @@ function Landing(){
                             </div>
                             <div className="row">
                                 <div className="col-6 margin">
-                                    <img src={FifthCar} alt="firstCar"/>
+                                    <img src={FifthCar} alt="firstCar" />
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-100 media">
                                     <ul class="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Gold</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">450 Hourses</span></li>
+                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Gold</span></li>
+                                        <li className="list-group-item border-0 list"><span><App className="icon"/></span><span className="margin1 media-text">450 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -174,12 +175,12 @@ function Landing(){
                                 <div className="col-6 margin">
                                     <img src={SixthCar} alt="firstCar"/>
                                 </div>
-                                <div className="col-6 margin">
+                                <div className="col-6 margin w-100 media">
                                     <ul className="list-group">
-                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon/></span><span className="margin1">Coupe</span></li>
-                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon/></span><span className="margin1">3.0l Twin Turbo</span></li>
-                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon/></span><span className="margin1">Copper</span></li>
-                                        <li className="list-group-item border-0 list"><span><App/></span><span className="margin1">570 Hourses</span></li>
+                                        <li className="list-group-item border-0 list"><span><LocalTaxiIcon className="icon"/></span><span className="margin1 media-text">Coupe</span></li>
+                                        <li className="list-group-item border-0 list"><span><ViewCarouselIcon className="icon"/></span><span className="margin1 media-text">3.0l Twin Turbo</span></li>
+                                        <li className="list-group-item border-0 list"><span><InvertColorsIcon className="icon"/></span><span className="margin1 media-text">Copper</span></li>
+                                        <li className="list-group-item border-0 list"><span><App className="icon"/></span><span className="margin1 media-text">570 Hourses</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -189,7 +190,7 @@ function Landing(){
             </section>
             <section id="section3">
                 <div className="row">
-                    <div className="col-4 ml-auto mr-auto margin2 border-warning d-flex justify-content-center align-items-center">
+                    <div className="col-4 ml-auto mr-auto margin2 border-warning d-flex justify-content-center align-items-center see-more">
                         <h3 className="text-center">See more!</h3>
                     </div>                
                 </div>
@@ -212,7 +213,7 @@ function Landing(){
                 </div>
                 <div className="row justify-content-center d-flex align-items-center margin4">
                     <div className="col-8 h-200">
-                        <img src={Map} alt="map" />
+                        <img src={Map} alt="map" className="img-media"/>
                     </div>
                 </div>
                 <div className="row justify-content-center d-flex align-items-center margin4">
@@ -260,7 +261,7 @@ function Landing(){
                                 <div className="col-6 ml-auto">
                                     <div className="row">
                                         <div className="col-2"><CheckIcon className="icon-color"/></div>
-                                        <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                        <div className="col-10"><p className="font-weight-bold">Attractive rental prices</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -271,8 +272,8 @@ function Landing(){
                             <div className="row">
                                 <div className="col-6 mr-auto">
                                     <div className="row">
-                                        <div className="col-2"><CheckIcon/></div>
-                                        <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                        <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                        <div className="col-10"><p className="font-weight-bold">Most cars without a deposit</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -283,8 +284,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 ml-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">Possible delivery of cars in Krakow</p></div>
                                 </div>
                             </div>
                         </div>
@@ -295,8 +296,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 mr-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">The best rental company in Krakow</p></div>
                                 </div>
                             </div>
                         </div>
@@ -307,8 +308,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 ml-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">Rental satisfaction guaranteed</p></div>
                                 </div>
                             </div>
                         </div>
@@ -319,8 +320,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 mr-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">We have beautiful and fast sports cars</p></div>
                                 </div>
                             </div>
                         </div>
@@ -331,8 +332,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 ml-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">Short-term and long-term rental</p></div>
                                 </div>
                             </div>
                         </div>
@@ -343,8 +344,8 @@ function Landing(){
                         <div className="row">
                             <div className="col-6 mr-auto">
                                 <div className="row">
-                                    <div className="col-2"><CheckIcon className=""/></div>
-                                    <div className="col-10"><h5 className="font-weight-bold">Atrakcyjne ceny wynajmu</h5></div>
+                                    <div className="col-2"><CheckIcon className="icon-color"/></div>
+                                    <div className="col-10"><p className="font-weight-bold">Wypożyczamy nasze auta do Ślubu</p></div>
                                 </div>
                             </div>
                         </div>
