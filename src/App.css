@@ -1,3 +1,4 @@
+
   .App {
     text-align: center;
   }
@@ -7,11 +8,10 @@
     pointer-events: none;
   }
 
-  /*@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }*/
+  .img-top{
+    background: url('../src/images/LandingPage.png') no-repeat center / cover;
+    height: 29rem;
+  }
 
   .App-header {
     background-color: #282c34;
@@ -128,12 +128,12 @@
     color: rgb(255, 89, 0);
   }
 
-  @media only screen and (max-width: 1567px) {
+  /*@media only screen and (max-width: 1567px) {
 
     body{
       background-color: cadetblue;
     }
-    /* For mobile phones: */
+    
     [class*="col-"] {
       width: auto;
       margin: auto;
@@ -201,6 +201,9 @@
     h4{
       margin-top: 2rem;
     }
-  }
+  }*/
  
 
+label{
+  color: black;
+}

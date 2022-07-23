@@ -1,17 +1,15 @@
-import NavbarApp from "../Navbar"
-import NavbarSecond from "../NavbarSecond"
+import Navbar from "../Navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Car from '../../images/car2.png'
+import Car from '../../images/car.jpg'
 import YellowCar from '../../images/yellowcar.png'
 import Footer from "../Footer";
 
 const SecondCar = () => {
     return (
         <>
-            <NavbarApp />
-            <NavbarSecond />
-            <div className="container-fluid">
-                <div className="row">
+            <Navbar />
+            <div className="container">
+                <div className="row mt-5">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <p>Porsche 911 Carrera 4s</p>
                     </div>
@@ -21,11 +19,11 @@ const SecondCar = () => {
                         <p className="text-danger">SexyCars Sports and Luxury Car Rental</p>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div className="row mt-5">
+                    <div className="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-xs-10">
                         <img src={Car} alt="car" />
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-xs-2">
                         <div className="container-fluid">
                             <div className="row">
                                 <h3>Gross Rental Prices:</h3>
@@ -48,16 +46,16 @@ const SecondCar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <p>Among passers-by, the most attention is always drawn to the passing Porsche 718 Cayman, arousing considerable admiration and sometimes envious glances. Thanks to SexyCars, everyone can experience a bit of luxury and feel special.</p>
+                <div className="row mt-5">
+                    <p className="">Among passers-by, the most attention is always drawn to the passing Porsche 718 Cayman, arousing considerable admiration and sometimes envious glances. Thanks to SexyCars, everyone can experience a bit of luxury and feel special.</p>
                 </div>
-                <div className="row">
+                <div className="row mt-5">
                     <p>We offer you a Porsche 718 Cayman rental, which can be offered by our rental company in the following cities: Kraków, Katowice, Wrocław, Warsaw, Rzeszów, Łódź, Częstochowa, Oświęcim, Kielce, Gdańsk, Gdynia, Sopot, and Tricity. More and more often, future newlyweds borrow this model for their wedding in order to add splendor to the most important day of their lives. We encourage you to familiarize yourself with our diverse and extremely affordable offer.</p>
                 </div>
-                <div className="row">
+                <div className="row mt-5">
                     <img src={YellowCar} alt="yellow-car" />
                 </div>
-                <div className="row">
+                <div className="row mt-5 mb-5">
                     <div className="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                         <p>- 20 - inch Carrera S wheels with high aesthetic values,</p>
                     </div>

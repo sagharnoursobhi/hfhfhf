@@ -2,12 +2,8 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {NavDropdown , Nav , } from 'react-bootstrap'
-import { Link } from "react-router-dom";
-import '../../App.css'
-import LandingPage from '../../images/LandingPage.png'
 import FirstCar from '../../images/car1.png'
-import SecondCar from '../../images/car2.png'
+import SecondCar from '../../images/carsecond.png'
 import ThirdCar from '../../images/car3.png'
 import FourthCar from '../../images/car4.png'
 import FifthCar from '../../images/car5.png'
@@ -20,9 +16,11 @@ import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import Map from '../../images/map.png';
 import CheckIcon from '@material-ui/icons/Check';
-import NavbarApp from '../Navbar';
-import NavbarSecond from '../NavbarSecond';
+import Navbar from '../Navbar';
 import Footer from '../Footer'
+import '../../App.css'
+import LandingPage from '../../images/LandingPage.png'
+
 
 
 const App = () => (
@@ -34,12 +32,10 @@ function Landing(){
         return(
             
                 <>
-                    <NavbarApp/>
-                    <NavbarSecond/>
+                    <Navbar/>
                     <div className="container-fluid" id="main">
                         <div className="row">
-                            <div className="col-lg-12 col-xs-12 col-sm-6 col-md-8 position-relative text-center text-white w-100">
-                                <img src={LandingPage} alt="LandingPage" className="img-fluid w-100 landing h-auto"/>
+                            <div className="col-lg-12 col-xs-12 col-sm-6 col-md-8 position-relative text-center text-white w-100 img-top">
                                 <div className="position-absolute transform blur mw-100 mh-100 w-100">
                                 <ul className="list-unstyled">
                                     <h3 className="text-danger">Dream car rental</h3>
@@ -354,7 +350,7 @@ function Landing(){
             </div>
             <div/>
             </section>
-            <section id="footer">
+            <section className="mt-5" id="footer">
                 <Footer id="footer"/>
             </section>
         </div>
