@@ -3,24 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '../Navbar';
-import FirstCar from '../../images/car1.png'
-import SecondCar from '../../images/carsecond.png'
-import ThirdCar from '../../images/car3.png'
-import FourthCar from '../../images/car4.png'
-import FifthCar from '../../images/car5.png'
-import SixthCar from '../../images/car6.png'
+import FirstCar from '../../assets/images/car1.png'
+import SecondCar from '../../assets/images/carsecond.png'
+import ThirdCar from '../../assets/images/car3.png'
+import FourthCar from '../../assets/images/car4.png'
+import FifthCar from '../../assets/images/car5.png'
+import SixthCar from '../../assets/images/car6.png'
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import Footer from '../Footer'
-import TenCar from '../../images/car10.png'
-import Eleven from '../../images/image11.png'
-import Twolve from '../../images/car12.png'
-import Thirtheen from '../../images/Frame.png'
-import Fourteen from '../../images/car14.png'
-import Fifteen from '../../images/car18.png'
-import Sixteen from '../../images/image16.png'
-import Seventeen from '../../images/car17.png'
+import TenCar from '../../assets/images/car10.png'
+import Eleven from '../../assets/images/image11.png'
+import Twolve from '../../assets/images/car12.png'
+import Thirtheen from '../../assets/images/Frame.png'
+import Fourteen from '../../assets/images/car14.png'
+import Fifteen from '../../assets/images/car18.png'
+import Sixteen from '../../assets/images/image16.png'
+import Seventeen from '../../assets/images/car17.png'
 
 
 

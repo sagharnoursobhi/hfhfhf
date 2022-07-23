@@ -5,12 +5,11 @@
     import 'bootstrap/dist/css/bootstrap.min.css';
     import Logo from '../images/logo.png'
     import './navbar.css'
-    import { NavLink, useLocation } from 'react-router-dom'
+    import { NavLink } from 'react-router-dom'
     import 'bootstrap/dist/css/bootstrap.min.css';
     import {Navbar, Nav} from 'react-bootstrap'
-    import './navbar.scss'
+    import '../assets/styles/navbar.scss'
     import Container from 'react-bootstrap/Container';
-    import { useEffect, useState } from 'react';
 
 
 
@@ -23,7 +22,7 @@ const NavbarSecond = ()=> {
                     <Container>
                         <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center">
                             <img src={Logo} alt="Logo" className="mx-100"/>
-                            <h5 className="ml-1">SexyCars</h5>
+                            <div className="ml-2">SexyCars</div>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around">

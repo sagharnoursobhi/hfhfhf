@@ -1,25 +1,25 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FirstCar from '../../images/car1.png'
-import SecondCar from '../../images/carsecond.png'
-import ThirdCar from '../../images/car3.png'
-import FourthCar from '../../images/car4.png'
-import FifthCar from '../../images/car5.png'
-import SixthCar from '../../images/car6.png'
-import SeventhCar from '../../images/car7.png'
-import EighthCar from '../../images/car8.png'
-import NinthCar from '../../images/car9.png'
+import FirstCar from '../../assets/images/car1.png';
+import SecondCar from '../../assets/images/carsecond.png';
+import ThirdCar from '../../assets/images/car3.png';
+import FourthCar from '../../assets/images/car4.png';
+import FifthCar from '../../assets/images/car5.png';
+import SixthCar from '../../assets/images/car6.png';
+import SeventhCar from '../../assets/images/car7.png';
+import EighthCar from '../../assets/images/car8.png';
+import NinthCar from '../../assets/images/car9.png';
 import LocalTaxiIcon from '@material-ui/icons/LocalTaxi';
 import ViewCarouselIcon from '@material-ui/icons/ViewCarousel';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
 import Map from '../../images/map.png';
 import CheckIcon from '@material-ui/icons/Check';
 import Navbar from '../Navbar';
-import Footer from '../Footer'
-import '../../App.css'
-import LandingPage from '../../images/LandingPage.png'
+import Footer from '../Footer';
+import '../../App.css';
+import '../../assets/styles/landingPage.scss';
 
 
 
@@ -31,9 +31,9 @@ const App = () => (
 function Landing(){
         return(
             
-                <>
+                <div className="landing-page-container">
                     <Navbar/>
-                    <div className="container-fluid" id="main">
+                    <div className="container-fluid heading" id="main">
                         <div className="row">
                             <div className="col-lg-12 col-xs-12 col-sm-6 col-md-8 position-relative text-center text-white w-100 img-top">
                                 <div className="position-absolute transform blur mw-100 mh-100 w-100">
@@ -49,8 +49,8 @@ function Landing(){
                                 <div className="col-lg-4 col-xl-4 col-md-4 col-sm-6 extraBorder d-flex ml-auto mr-auto ">
                                     <div className="container-fluid">
                                         <div className="row">
-                                            <div className="col-12 style ">
-                                                <div className="col-7 h4-media"><h4 className="text-center">Porsche 911 Carrera 4s</h4></div>
+                                            <div className="col-12">
+                                                <div className="col-7"><h4 className="text-center">Porsche 911 Carrera 4s</h4></div>
                                             </div>
                             </div>
                             <div className="row margin-row">
@@ -355,7 +355,7 @@ function Landing(){
             </section>
         </div>
             
-    </>
+    </div>
         )
     }
 

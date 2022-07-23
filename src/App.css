@@ -1,42 +1,4 @@
 
-  .App {
-    text-align: center;
-  }
-
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-
-  .img-top{
-    background: url('../src/images/LandingPage.png') no-repeat center / cover;
-    height: 29rem;
-  }
-
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-
-  .App-link {
-    color: #61dafb;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
   .a1 {
     font-family: 'Raleway' , sans-serif;
     color: #ff5e00;
@@ -92,15 +54,6 @@
     margin-top: 20px;
   }
 
-  .style{
-    height: 7em;
-  }
-
-  .col-7{
-    vertical-align: middle;
-    margin: 40px auto;
-  }
-
   .list{
     background-color: rgb(249, 249, 249);
   }
@@ -127,83 +80,7 @@
   .icon-color{
     color: rgb(255, 89, 0);
   }
-
-  /*@media only screen and (max-width: 1567px) {
-
-    body{
-      background-color: cadetblue;
-    }
-    
-    [class*="col-"] {
-      width: auto;
-      margin: auto;
-    }
-    .landing{
-      margin: 2rem;
-    }
-
-    img{
-      width: 100%;
-    }
-  }
-
-  @media only screen and (max-width: 1320px) and (min-width: 498px)  {
-
-    body{
-      background-color: chartreuse;
-    }
-    .h4-media{
-      margin-top: 16px;
-    }
-    .h4-media h4 {
-      font-size: 1rem;
-    }
-
-    .margin-row{
-      margin-top: -45px;
-    }
-
-    .see-more{
-      margin: 26px;
-    }
-
-    .margin3{
-      margin: 26px;
-    }
-
-    .col-8 h3,h4,p{
-      font-size: 13px;
-    }
-    .col-5 p{
-      font-size: 10px;
-    }
-
-    .margin4 h4{
-      font-size: 1rem;
-      margin: 2rem;
-    }
-
-    .col-5 p{
-      margin-top: 1rem;
-    }
-
-  }
-
-  @media only screen and (max-width: 1008px) and (min-width: 498px){
-    .icon{
-      width: auto;
-    }
-
-    .media-text{
-      font-size: 11px;
-    }
-
-    h4{
-      margin-top: 2rem;
-    }
-  }*/
  
-
 label{
   color: black;
 }
