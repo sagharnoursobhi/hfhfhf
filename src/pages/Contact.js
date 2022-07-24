@@ -1,6 +1,6 @@
-import Footer from '../Footer';
-import Navbar from '../Navbar';
-import mapSecond from '../../assets/images/mapContact.png'
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import mapSecond from '../assets/images/mapContact.png'
 import StarIcon from '@material-ui/icons/Star';
 
 

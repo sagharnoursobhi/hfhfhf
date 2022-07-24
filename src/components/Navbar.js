@@ -3,8 +3,7 @@
     import InstagramIcon from '@material-ui/icons/Instagram';
     import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
     import 'bootstrap/dist/css/bootstrap.min.css';
-    import Logo from '../images/logo.png'
-    import './navbar.css'
+    import Logo from '../assets/images/logo.png'
     import { NavLink } from 'react-router-dom'
     import 'bootstrap/dist/css/bootstrap.min.css';
     import {Navbar, Nav} from 'react-bootstrap'

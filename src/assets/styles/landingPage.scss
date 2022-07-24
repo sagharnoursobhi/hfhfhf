@@ -4,5 +4,47 @@ div.landing-page-container {
             background: url('../../assets/images/LandingPage.png') no-repeat center / cover;
             height: 29rem;
         }
+
+        .heading-blur{
+            backdrop-filter: blur(6px);
+
+            &.empty-div-transform {
+                transform:translate(-50%, 50%);
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+
+    div.cars-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 35px;
+        column-gap: 35px;
+
+        @media screen and (max-width:700px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width:500px) {
+            grid-template-columns: 1fr;
+        }
+        div.car-card {
+            border-right: 7px solid orange;
+            border-bottom: 7px solid orange;
+            background-color: rgb(249, 249, 249);
+
+            div.car-title {
+                font-size: 25px;
+                font-weight: 500;
+                color: rgba(0, 0, 0, 0.774);
+            }
+        }
+    }
+
+    section.section-second {
+        div.custom-orange-border {
+            
+        }
     }
 }

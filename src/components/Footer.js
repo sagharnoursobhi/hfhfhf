@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Logo from '../images/logo.png'
+import Logo from '../assets/images/logo.png'
 import PhoneIcon from '@material-ui/icons/Phone';
 import RoomIcon from '@material-ui/icons/Room';
 import DraftsIcon from '@material-ui/icons/Drafts';

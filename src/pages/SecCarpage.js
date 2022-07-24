@@ -1,8 +1,8 @@
-import Navbar from "../Navbar"
+import Navbar from "../components/Navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Car from '../../images/car.jpg'
-import YellowCar from '../../images/yellowcar.png'
-import Footer from "../Footer";
+import Car from '../assets/images/car.jpg'
+import YellowCar from '../assets/images/yellowcar.png'
+import Footer from "../components/Footer";
 
 const SecondCar = () => {
     return (

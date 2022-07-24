@@ -1,8 +1,8 @@
 
-  .a1 {
+ /*  .a1 {
     font-family: 'Raleway' , sans-serif;
     color: #ff5e00;
-  }
+  } */
 
   .viewWidth {
     max-width: 100%;
@@ -10,44 +10,27 @@
     height: 43em;
   }
 
-  .extra{
+  /* .extra{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
-  .padding{
+  /* .padding{
     padding: 30em 12em;
     color: white;
-  }
+  } */
 
-  .blur{
-    backdrop-filter: blur(6px);
-  }
+  
 
-  body {
-    font-family: "Raleway", sans-serif ;
-  }
-
-  .nav2{
-    height: 5em;
-  }
-
-  .width{
-    width: 24px;
-  }
-  .transform{
+ /*  .empty-div-transform{
     transform:translate(-50%, 50%);
     top: 50%;
     left: 50%;
-  }
+  } */
 
   .extraBorder{
-    border-right: 7px solid orange;
-    border-bottom: 7px solid orange;
-    margin-top: 3em;
-    background-color: rgb(249, 249, 249);
-    height: 22em;
+    
   }
 
   .margin{
