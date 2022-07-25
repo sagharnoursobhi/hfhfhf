@@ -16,7 +16,7 @@ const NavbarSecond = ()=> {
    
         
         return (
-            <div>
+            <div className="navbar-container">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navbar-custom-container">
                     <Container>
                         <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center">
@@ -25,12 +25,12 @@ const NavbarSecond = ()=> {
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around">
-                            <Nav className="me-auto align-items-center ml-3 mr-3 links-container">
+                            <Nav className="me-auto align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ml-xl-3 ml-lg-3 mr-xl-3 mr-lg-3 links-container">
                                 <Nav.Link as={NavLink} className="link" to='/cars'>Cars</Nav.Link>
                                 <Nav.Link as={NavLink} className="link" to='/car-details'>Information</Nav.Link>
                                 <Nav.Link as={NavLink} className="link" to='/contact'>Contact</Nav.Link>
                             </Nav>
-                            <Nav className="links-container align-items-center ">
+                            <Nav className="links-container flex-md-row flex-sm-row align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ">
                                 <Nav.Link  className="link" href="#deets"><InstagramIcon /></Nav.Link>
                                 <Nav.Link  className="link" href="#deets"><FacebookIcon /></Nav.Link>
                                 <Nav.Link  className="link" href="#deets"><PlayCircleFilledWhiteIcon /></Nav.Link>
