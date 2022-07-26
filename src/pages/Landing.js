@@ -9,28 +9,25 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../assets/styles/landingPage.scss';
 import data from '../data/CarsInformation';
-import CarInfo from '../data/CarInfo';
+import { Suspense, useState } from 'react';
+const ListOfCars = React.lazy(() => import('../components/ListOfCars'));
 
 
-function Landing(){
+export default function Landing(){
 
-        const listOfCars = data.map((item,ix) => {
-                return(
-                    <div className=" custom-orange-border car-card p-4" key={ix}>
-                        <div className="car-title mb-3">{item.carName}</div>
-                        <div className="car-info-container flex-xl-row flex-lg-row flex-md-column flex-sm-column d-flex justify-content-around align-items-center">
-                            <div className="img-container"><img src={item.carImageSrc} alt="" /></div>
-                            <CarInfo brand={item.brand} enginInfo={item.enginInfo} color={item.color} speed={item.speed}/>
-                        </div>
-                    </div>
-                )
-            })
+    const [numberOfItems, setNumberOfItems] = useState(3);
+    let initialItems = data.slice(0, numberOfItems);
 
-        const listOfOptions = [
-            'Attractive rental prices', 'Most cars without a deposit', 'Possible delivery of cars in Krakow',
-            'The best rental company in Krakow', 'Rental satisfaction guaranteed', 'We have beautiful and fast sports cars',
-            'Short-term and long-term rental', 'Wypożyczamy nasze auta do Ślubu'
-        ]
+
+    const ItemsHandler = () => {
+        setNumberOfItems(numberOfItems + numberOfItems);
+    }
+
+    const listOfOptions = [
+        'Attractive rental prices', 'Most cars without a deposit', 'Possible delivery of cars in Krakow',
+        'The best rental company in Krakow', 'Rental satisfaction guaranteed', 'We have beautiful and fast sports cars',
+        'Short-term and long-term rental', 'Wypożyczamy nasze auta do Ślubu'
+    ]
 
         return(  
                 <div className="landing-page-container">
@@ -43,11 +40,13 @@ function Landing(){
                     </div>
                     <div className="container-fluid" id="main">
                         <div className='cars-container p-5'>
-                            { listOfCars }
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <ListOfCars itemsToRender={initialItems}/>
+                            </Suspense>
                         </div>
-                        <div className="d-flex justify-content-center align-items-center more-btn">
+                        { numberOfItems < data.length && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">
                             See more!             
-                        </div>
+                        </div>}
                         <div className="meet-container pt-5">
                             <div className="meet-title">Meet our fleet!</div>
                             <div className="meet-desc">SexyCars sports and luxury car rental focuses on one goal, which is your complete satisfaction with renting a sports car with us. We will guarantee you maximum joy and comfort of using sports cars in our rental. We also try to make this pleasure not too expensive.</div>
@@ -91,4 +90,4 @@ function Landing(){
         )
     }
 
-export default Landing
+ 
