@@ -1,4 +1,5 @@
 import CarInfo from './CarInfo';
+import { Link } from 'react-router-dom';
 
 export default function ListOfCars(props) {
     return(
@@ -11,6 +12,7 @@ export default function ListOfCars(props) {
                             <div className="img-container"><img src={item.carImageSrc} alt="" /></div>
                             <CarInfo brand={item.brand} enginInfo={item.enginInfo} color={item.color} speed={item.speed}/>
                         </div>
+                        <div className="d-flex justify-content-center align-items-center mt-3"><Link className="text-info cursor-pointer" to={`/product/${item.id}`}>Read More</Link></div>
                     </div>
                 )
             })}

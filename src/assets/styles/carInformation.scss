@@ -1,0 +1,67 @@
+@import '../styles/main.scss';
+
+div.title {
+    margin-top: 30px;
+    font-size: 35px;
+    color: $custom-font-color-black;
+    font-weight: 500;
+    text-align: center;
+}
+
+div.cars-details-container {
+    max-width: 1200px;
+    @media screen and (max-width: 900px) {
+        max-width: 600px;
+    }
+    /* @media screen and (max-width: 414px) {
+        max-width: 400px;
+    } */
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    div.grid-item {
+        background-color: #f6dab963;
+        border-radius: 5px;
+
+        div.rental-car-img-container {
+            img {
+                width: 400px;
+            }
+        }
+        
+        .car-name {
+            font-size: 20px;
+            color: $custom-font-color-black;
+        }
+
+        .price-title {
+            color: $custome-font-color-orange;
+            font-size: 25px;
+        }
+
+        .price-detail {
+            color: $custom-font-color-black;
+            font-size: 18px;
+        }
+    }
+    
+}
+
+div.other-details {
+    max-width: 1200px;
+    margin: 30px auto;
+    font-size: 20px;
+    color: $custom-font-color-black;
+
+    div.other-details-car-container  {
+        img {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        max-width: 600px;
+    }
+}

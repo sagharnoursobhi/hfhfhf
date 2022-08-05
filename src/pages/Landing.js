@@ -8,9 +8,11 @@ import CheckIcon from '@material-ui/icons/Check';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../assets/styles/landingPage.scss';
-import data from '../data/CarsInformation';
-import { Suspense, useState } from 'react';
-const ListOfCars = React.lazy(() => import('../components/ListOfCars'));
+import data from '../data/data';
+import { useState, useEffect } from 'react';
+import Loader from '../components/Loader';
+import ListOfCars from '../components/ListOfCars';
+
 
 
 export default function Landing(){
@@ -29,7 +31,49 @@ export default function Landing(){
         'Short-term and long-term rental', 'Wypożyczamy nasze auta do Ślubu'
     ]
 
+    const [cars, setCars] = useState({
+        loading:false,
+        data:null,
+        err:false
+    });
+
+    useEffect(() => {
+        setCars({
+            loading:true,
+            data:null,
+            err:false
+        })
+        setTimeout(()=>{
+            setCars({
+                loading:false,
+                data:data,
+                err:false
+            })
+        }, 500);
+        if(!data) {
+            setCars({
+                loading:false,
+                data:null,
+                err:true
+            })
+        }
+    },[]);
+
+    let content = null;
+
+    if(cars.data) {
+        content = <ListOfCars itemsToRender={initialItems}/>;
+    }
+
+    if(cars.loading) {
+        content = <Loader/>
+    }
+
+
         return(  
+            <>
+                { cars.err ? <h1 className="ml-5">There was an error. Please refresh the page or try again later.</h1> :
+                
                 <div className="landing-page-container">
                     <Navbar/>
                     <div className="heading">
@@ -39,12 +83,10 @@ export default function Landing(){
                         </div>
                     </div>
                     <div className="container-fluid" id="main">
-                        <div className='cars-container p-5'>
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <ListOfCars itemsToRender={initialItems}/>
-                            </Suspense>
+                        <div className={`p-5 ${cars.loading ? 'loader-container' : 'cars-container'}`}>
+                            { content }
                         </div>
-                        { numberOfItems < data.length && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">
+                        {numberOfItems < data.length && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">
                             See more!             
                         </div>}
                         <div className="meet-container pt-5">
@@ -86,7 +128,8 @@ export default function Landing(){
                         </div>
                     </div>
                     <Footer id="footer"/>
-                </div>
+                </div>}
+            </>
         )
     }
 
