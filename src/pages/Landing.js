@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SeventhCar from '../assets/images/car7.png';
-import EighthCar from '../assets/images/car8.png';
-import NinthCar from '../assets/images/car9.png';
+import landingPageFirst from '../assets/images/landingPageFirst.png';
+import landingPageSecond from '../assets/images/landingPageSecond.png';
+import landingPageThird from '../assets/images/landingPageThird.png';
 import Map from '../assets/images/map.png';
 import CheckIcon from '@material-ui/icons/Check';
 import Navbar from '../components/Navbar';
@@ -100,18 +100,18 @@ export default function Landing(){
                             <div className="meet-options">They can be:</div>
                             <div className="meet-options">Cars modified from classic bodies to sports bodies (e.g. as a result of tuning)</div>
                             <figure className="meet-img-container mw-100 mh-100">
-                                <img src={SeventhCar} alt="map" className="img-media"/>
+                                <img src={landingPageFirst} alt="map" className="img-media"/>
                                 <figcaption>2019 Toyota Corolla Hatchback (tuningowana)</figcaption>
                             </figure>
                             <div className="meet-options">They can be:</div>
                             <div className="meet-options">Typically sports cars produced for fun driving</div>
                             <figure className="meet-img-container mw-100 mh-100">
-                                <img src={EighthCar} alt="car8"/>
+                                <img src={landingPageSecond} alt="car8"/>
                                 <figcaption>2018 Lamborghini Huracan LP580</figcaption>
                             </figure>
                             <div className="meet-options">Extreme cars, designed for competitive and racing driving</div>
                             <figure className="meet-img-container mw-100 mh-100">
-                                <img src={NinthCar} alt="car8"/>
+                                <img src={landingPageThird} alt="car8"/>
                                 <figcaption>2016 Aston Martin Vulcan</figcaption>
                             </figure>
                             <div className="meet-options">So before you choose sports cars to rent or buy, find out which one is worth choosing. We, on the other hand, will provide appropriate preparation and professional service:</div>

@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "../components/Footer";
-import carsInformation from "../data/data";
+import data from "../data/data";
 import CarsInfoMoreDetail from '../components/CarsInfoMoreDetail'
 import rentCar from '../assets/images/rentCar.jpeg';
 import '../assets/styles/carInformation.scss';
+import { useParams } from 'react-router-dom'
 
 const SecondCar = () => {
+
+    const { id } = useParams();
 
 
     return (
@@ -14,8 +17,8 @@ const SecondCar = () => {
             <Navbar />
             <div className="title">SexyCars Sports and Luxury Car Rental</div>
             <div className="cars-details-container">
-                {carsInformation.map((item,ix) => {
-                    return <CarsInfoMoreDetail name={item.carName} source={item.carImageSrc} rentalPrices={item.rentalPrices} key={ix}/>
+                {data.map((item,ix) => {
+                    return <CarsInfoMoreDetail name={item.carName} source={item.carImageSrc} rentalPrices={item.rentalPrices} key={ix} id={item.id}/>
                 })}
             </div>
             <div className='other-details'>

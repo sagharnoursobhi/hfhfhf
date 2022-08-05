@@ -1,20 +1,20 @@
-import FirstCar from '../assets/images/car1.png';
-import SecondCar from '../assets/images/Porsche_718_Cayman_S_2022-removebg-preview.png';
-import ThirdCar from '../assets/images/car3.png';
-import FourthCar from '../assets/images/car4.png';
-import FifthCar from '../assets/images/car5.png';
-import SixthCar from '../assets/images/car6.png';
-import SeventhCar from '../assets/images/car10.png';
-import EigthCar from '../assets/images/car12.png';
-import NinthCar from '../assets/images/Frame.png';
-import TenthCar from '../assets/images/car18.png';
-import EleventhCar from '../assets/images/car14.png';
-import TwolveCar from '../assets/images/image16.png';
-import ThirteenCar from '../assets/images/car17.png';
-import FourteenCar from '../assets/images/image11.png';
+import FirstCar from '../assets/images/car_1.png';
+import SecondCar from '../assets/images/car_2.png';
+import ThirdCar from '../assets/images/car_3.png';
+import FourthCar from '../assets/images/car_4.png';
+import FifthCar from '../assets/images/car_5.png';
+import SixthCar from '../assets/images/car_6.png';
+import SeventhCar from '../assets/images/car_7.png';
+import EigthCar from '../assets/images/car_8.png';
+import NinthCar from '../assets/images/car_9.png';
+import TenthCar from '../assets/images/car_10.png';
+import EleventhCar from '../assets/images/car_11.png';
+import TwolveCar from '../assets/images/car_12.png';
+import ThirteenCar from '../assets/images/car_13.png';
+import FourteenCar from '../assets/images/car_14.png';
 
 
-const CarsInformation  = [
+const data  = [
         { id:'1', carName:'Porsche 911 Carrera 4s', carImageSrc:FirstCar, brand:'Coupe', enginInfo:'3.0l Twin Turbo', color:'Red', speed:'450 Hourses',
         rentalPrices: "- 1 day / 24h: PLN 990. 3 - 6 days: PLN 890 / day. - Week / 7 days: PLN 4,400. - Month: PLN 11,000. - 350 km / day limit - then PLN 3 / km."},
         { id:'2',carName:'Porsche 718 Cayman', carImageSrc:SecondCar, brand:'Coupe', enginInfo:'3.0l Twin Turbo', color:'Yellow', speed:'300 Hourses',
@@ -45,4 +45,4 @@ const CarsInformation  = [
         rentalPrices: "- 1 day / 24h: PLN 2090. 3 - 6 days: PLN 1090 / day. - Week / 7 days: PLN 6,400. - Month: PLN 12,000. - 350 km / day limit - then PLN 3 / km."},
 ]
 
-export default CarsInformation;
+export default data;
