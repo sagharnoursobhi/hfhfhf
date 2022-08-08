@@ -26,7 +26,8 @@ const NavbarSecond = ()=> {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around">
                             <Nav className="me-auto align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ml-xl-3 ml-lg-3 mr-xl-3 mr-lg-3 links-container">
-                                <Nav.Link as={NavLink} className="link" to='/car-details'>Information</Nav.Link>
+                                <Nav.Link as={NavLink} className="link" to='/'>Home Page</Nav.Link>
+                                <Nav.Link as={NavLink} className="link" to='/cars-information'>Cars Information</Nav.Link>
                                 <Nav.Link as={NavLink} className="link" to='/contact'>Contact</Nav.Link>
                             </Nav>
                             <Nav className="links-container flex-md-row flex-sm-row align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ">

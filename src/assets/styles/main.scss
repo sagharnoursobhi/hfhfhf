@@ -19,3 +19,34 @@ $custom-orange-border: rgb(233, 160, 24);
 $custom-font-color-black: rgba(0, 0, 0, 0.774);
 
 $custome-font-color-orange: rgb(255, 89, 0);
+
+$custom-color-red: rgb(241, 43, 43);
+
+button.rent-btn {
+    cursor: pointer;
+    border: 0;
+    color: rgb(125, 10, 10);
+    font-weight: 600;
+    background-color: transparent;
+    background-color: rgb(240, 195, 195);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: rgb(172, 142, 142);
+    }
+}
+
+.text-medium {
+    color: $custom-font-color-black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-title {
+    color: $custom-color-red;
+    font-size: 25px;
+    font-weight: 600;
+}
