@@ -5,23 +5,20 @@ import data from "../data/data";
 import CarsInfoMoreDetail from '../components/CarsInfoMoreDetail'
 import rentCar from '../assets/images/rentCar.jpeg';
 import '../assets/styles/carInformation.scss';
-import { useParams } from 'react-router-dom'
 
 const SecondCar = () => {
-
-    const { id } = useParams();
 
 
     return (
         <>
             <Navbar />
             <div className="title">SexyCars Sports and Luxury Car Rental</div>
-            <div className="cars-details-container">
+            <div className="cars-details-container pl-4 pr-4">
                 {data.map((item,ix) => {
                     return <CarsInfoMoreDetail name={item.carName} source={item.carImageSrc} rentalPrices={item.rentalPrices} key={ix} id={item.id}/>
                 })}
             </div>
-            <div className='other-details'>
+            <div className='other-details pl-4 pr-4'>
                 <div>Among passers-by, the most attention is always drawn to the passing car, arousing considerable admiration and sometimes envious glances. Thanks to SexyCars, everyone can experience a bit of luxury and feel special.</div>
                 <div>We offer you a car, which can be offered by our rental company in the following cities: Kraków, Katowice, Wrocław, Warsaw, Rzeszów, Łódź, Częstochowa, Oświęcim, Kielce, Gdańsk, Gdynia, Sopot, and Tricity. More and more often, future newlyweds borrow this model for their wedding in order to add splendor to the most important day of their lives. We encourage you to familiarize yourself with our diverse and extremely affordable offer.</div>
                 <div className="other-details-car-container"><img src={rentCar} alt="" /></div>
