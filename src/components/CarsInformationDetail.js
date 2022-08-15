@@ -20,6 +20,8 @@ export default function CarsInformationDetail() {
     const [phoneNum, setPhoneNum] = useState('');
     const [newUser, setNewUser] = useState('');
     const [error, setError] = useState();
+    const [rentDuration, setRentDuration] = useState('');
+    const [radioError, setRadioError] = useState(false);
 
     const onConfirm = () => {
         setError(null);
@@ -28,7 +30,7 @@ export default function CarsInformationDetail() {
     const onSubmithandler = (e) => {
         e.preventDefault();
 
-        if(fullName.trim().length === 0 || email.trim().length === 0) {
+        if(fullName.trim().length === 0 || email.trim().length === 0 ) {
             setError({
                 name:"Invalid Input!",
                 message:"Name and email fields must be filled out.",
@@ -36,10 +38,15 @@ export default function CarsInformationDetail() {
             })
         }
 
-        setNewUser([...newUser, {name: fullName, email: email, phone: phoneNum}]);
+        if( rentDuration.length === 0 ) {
+            setRadioError(true);
+        }
+
+        setNewUser([...newUser, {name: fullName, email: email, phone: phoneNum, duration: rentDuration}]);
         setFullName('');
         setEmail('');
         setPhoneNum('');
+        setRentDuration('');
     }
 
     return(
@@ -67,7 +74,23 @@ export default function CarsInformationDetail() {
                         <Form.Label>Phone</Form.Label>
                         <Form.Control onChange={(e)=>setPhoneNum(e.target.value)} value={phoneNum} type="text" placeholder="Telephone" />
                     </Form.Group>
-                    <Button variant="primary" className="rent-btn d-flex justify-content-center align-items-center" type="submit">
+                    <Form.Group className="mb-3 d-flex flex-column justify-content-start align-items-start">
+                        <label htmlFor="">How long would you like to rent this car?</label>
+                        {radioError && <span className="text-danger mb-2">This field is required!</span>}
+                        <div className="d-flex justify-content-center align-items-center">
+                            <Form.Check className="ml-3" checked={rentDuration === "3 days"} type="radio" onChange={(e) => setRentDuration(e.target.value)} value="3 days"/>
+                            <Form.Label className="mb-0">3 days</Form.Label>
+                        </div>
+                        <div className="d-flex justify-content-center align-items-center mt-3">
+                            <Form.Check className="ml-3" type="radio" checked={rentDuration === "6 days"} onChange={(e) => setRentDuration(e.target.value)} value="6 days"/>
+                            <Form.Label className="mb-0">6 days</Form.Label>
+                        </div>
+                        <div className="d-flex justify-content-center align-items-center mt-3">
+                            <Form.Check className="ml-3" type="radio" checked={rentDuration === "10 days"} onChange={(e) => setRentDuration(e.target.value)} value="10 days"/>
+                            <Form.Label className="mb-0">10 days</Form.Label>
+                        </div>
+                    </Form.Group>
+                    <Button className="rent-btn d-flex justify-content-center align-items-center" type="submit">
                         <LocalTaxiIcon/>
                         <span>Rent the Car</span>
                     </Button>
