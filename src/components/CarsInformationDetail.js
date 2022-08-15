@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ErrorModal from "./ErrorModal";
 
 
@@ -40,6 +40,7 @@ export default function CarsInformationDetail() {
 
         if( rentDuration.length === 0 ) {
             setRadioError(true);
+            return;
         }
 
         setNewUser([...newUser, {name: fullName, email: email, phone: phoneNum, duration: rentDuration}]);
@@ -48,6 +49,14 @@ export default function CarsInformationDetail() {
         setPhoneNum('');
         setRentDuration('');
     }
+
+    console.log(newUser)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setRadioError(false);
+        }, 3000)
+    }, [radioError]);
 
     return(
         <div className="position-relative">
