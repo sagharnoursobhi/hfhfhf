@@ -12,10 +12,14 @@ import data from '../data/data';
 import { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 import ListOfCars from '../components/ListOfCars';
+import FetchData from '../data/FetchData';
 
 
 
 export default function Landing(){
+
+    const url = 'http://localhost:1337/api/cars';
+    const fetch  = FetchData(url);
 
     const [numberOfItems, setNumberOfItems] = useState(3);
     let initialItems = data.slice(0, numberOfItems);
@@ -46,7 +50,7 @@ export default function Landing(){
         setTimeout(()=>{
             setCars({
                 loading:false,
-                data:data,
+                data: data,
                 err:false
             })
         }, 500);

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "car"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "carName": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "carImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "enginInfo": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "speed": {
+      "type": "string"
+    },
+    "rentalPrices": {
+      "type": "text"
+    }
+  }
+}
