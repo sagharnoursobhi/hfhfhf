@@ -21,6 +21,14 @@ div.page-container {
         padding: 30px;
         border-radius: 5px;
 
+        .form-check {
+            input.form-check-input:checked {
+                width: 1em;
+                height: 1em;
+                margin-top: 11px;
+            }
+        }
+
         .rent-btn {
             &:focus {
                 background-color:rgb(240, 195, 195);
