@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import landingPageFirst from '../assets/images/landingPageFirst.png';
 import landingPageSecond from '../assets/images/landingPageSecond.png';
@@ -8,21 +8,19 @@ import CheckIcon from '@material-ui/icons/Check';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../assets/styles/landingPage.scss';
-import data from '../data/data';
-import { useState, useEffect } from 'react';
 import Loader from '../components/Loader';
 import ListOfCars from '../components/ListOfCars';
-import FetchData from '../data/FetchData';
+import { FetchData } from '../data/FetchData';
 
 
 
 export default function Landing(){
 
-    const url = 'http://localhost:1337/api/cars';
-    const fetch  = FetchData(url);
+    const url = 'http://localhost:1337/api/cars?populate=%2A';
+    const products = FetchData(url);
 
     const [numberOfItems, setNumberOfItems] = useState(3);
-    let initialItems = data.slice(0, numberOfItems);
+    let initialItems = [];
 
 
     const ItemsHandler = () => {
@@ -35,13 +33,14 @@ export default function Landing(){
         'Short-term and long-term rental', 'Wypożyczamy nasze auta do Ślubu'
     ]
 
-    const [cars, setCars] = useState({
+    /* const [cars, setCars] = useState({
         loading:false,
         data:null,
         err:false
     });
 
     useEffect(() => {
+
         setCars({
             loading:true,
             data:null,
@@ -50,7 +49,7 @@ export default function Landing(){
         setTimeout(()=>{
             setCars({
                 loading:false,
-                data: data,
+                data: dataFromApi,
                 err:false
             })
         }, 500);
@@ -61,22 +60,25 @@ export default function Landing(){
                 err:true
             })
         }
-    },[]);
+    },[]); */
 
-    let content = null;
+    let content = [];
+    let productsLength = '';
 
-    if(cars.data) {
+    if(products.data) {
+        initialItems = products.data.slice(0, numberOfItems);
+        productsLength = products.data.length;
         content = <ListOfCars itemsToRender={initialItems}/>;
     }
 
-    if(cars.loading) {
+    if(products.loading) {
         content = <Loader/>
     }
 
 
         return(  
             <>
-                { cars.err ? <h1 className="ml-5">There was an error. Please refresh the page or try again later.</h1> :
+                { products.err ? <h1 className="ml-5">There was an error. Please refresh the page or try again later.</h1> :
                 
                 <div className="landing-page-container">
                     <Navbar/>
@@ -87,10 +89,10 @@ export default function Landing(){
                         </div>
                     </div>
                     <div className="container-fluid" id="main">
-                        <div className={`p-5 ${cars.loading ? 'loader-container' : 'cars-container'}`}>
+                        <div className={`p-5 ${products.loading ? 'loader-container' : 'cars-container'}`}>
                             { content }
                         </div>
-                        {numberOfItems < data.length && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">
+                        { numberOfItems < productsLength && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">
                             See more!             
                         </div>}
                         <div className="meet-container pt-5">
