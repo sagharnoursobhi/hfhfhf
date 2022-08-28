@@ -5,12 +5,12 @@ import landingPageSecond from '../assets/images/landingPageSecond.png';
 import landingPageThird from '../assets/images/landingPageThird.png';
 import Map from '../assets/images/map.png';
 import CheckIcon from '@material-ui/icons/Check';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../assets/styles/landingPage.scss';
 import Loader from '../components/Loader';
 import ListOfCars from '../components/ListOfCars';
 import { FetchData } from '../data/FetchData';
+import Heading from '../components/Heading';
 
 
 
@@ -24,7 +24,7 @@ export default function Landing(){
 
 
     const ItemsHandler = () => {
-        setNumberOfItems(numberOfItems + numberOfItems);
+        setNumberOfItems(numberOfItems + 3);
     }
 
     const listOfOptions = [
@@ -33,46 +33,17 @@ export default function Landing(){
         'Short-term and long-term rental', 'Wypożyczamy nasze auta do Ślubu'
     ]
 
-    /* const [cars, setCars] = useState({
-        loading:false,
-        data:null,
-        err:false
-    });
-
-    useEffect(() => {
-
-        setCars({
-            loading:true,
-            data:null,
-            err:false
-        })
-        setTimeout(()=>{
-            setCars({
-                loading:false,
-                data: dataFromApi,
-                err:false
-            })
-        }, 500);
-        if(!data) {
-            setCars({
-                loading:false,
-                data:null,
-                err:true
-            })
-        }
-    },[]); */
-
     let content = [];
     let productsLength = '';
+
+    if(products.loading) {
+        content = <Loader/>
+    }
 
     if(products.data) {
         initialItems = products.data.slice(0, numberOfItems);
         productsLength = products.data.length;
         content = <ListOfCars itemsToRender={initialItems}/>;
-    }
-
-    if(products.loading) {
-        content = <Loader/>
     }
 
 
@@ -81,13 +52,7 @@ export default function Landing(){
                 { products.err ? <h1 className="ml-5">There was an error. Please refresh the page or try again later.</h1> :
                 
                 <div className="landing-page-container">
-                    <Navbar/>
-                    <div className="heading">
-                        <div className="position-absolute empty-div-transform heading-blur mw-100 mh-100 w-100 heading-desc">
-                            <div>Dream car rental</div>
-                            <div>We will make your dreams come true!</div>
-                        </div>
-                    </div>
+                    <Heading/>
                     <div className="container-fluid" id="main">
                         <div className={`p-5 ${products.loading ? 'loader-container' : 'cars-container'}`}>
                             { content }

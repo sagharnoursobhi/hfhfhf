@@ -24,10 +24,10 @@ export function FetchData(url) {
                     error:null,
                     loading:false
                 })
-            }).catch(err => {
+            }).catch( () => {
                 setItems({
                     data:null,
-                    error:err,
+                    error:true,
                     loading:false
                 })
             })

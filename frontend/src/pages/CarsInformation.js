@@ -1,12 +1,21 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "../components/Footer";
-import data from "../data/data";
 import CarsInfoMoreDetail from '../components/CarsInfoMoreDetail'
 import rentCar from '../assets/images/rentCar.jpeg';
 import '../assets/styles/carInformation.scss';
+import { FetchData } from "../data/FetchData";
 
 const SecondCar = () => {
+
+    const products = FetchData('http://localhost:1337/api/cars?populate=%2A');
+    let content = [];
+
+    if(products.data) {
+       content =  products.data.map((item,ix) => {
+            return <CarsInfoMoreDetail name={item.attributes.carName} source={`http://localhost:1337${item.attributes.carImage.data.attributes.url}`} rentalPrices={item.attributes.rentalPrices} key={ix} id={item.id}/>
+        })
+    }
 
 
     return (
@@ -14,9 +23,7 @@ const SecondCar = () => {
             <Navbar />
             <div className="title">SexyCars Sports and Luxury Car Rental</div>
             <div className="cars-details-container pl-4 pr-4">
-                {data.map((item,ix) => {
-                    return <CarsInfoMoreDetail name={item.carName} source={item.carImageSrc} rentalPrices={item.rentalPrices} key={ix} id={item.id}/>
-                })}
+                { content }
             </div>
             <div className='other-details pl-4 pr-4'>
                 <div>Among passers-by, the most attention is always drawn to the passing car, arousing considerable admiration and sometimes envious glances. Thanks to SexyCars, everyone can experience a bit of luxury and feel special.</div>

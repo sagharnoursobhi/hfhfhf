@@ -1,14 +1,14 @@
-div.navbar-custom-container {
-    .links-container {
-        a.link {
-            font-size: 25px;
-        }
-        .active {
-            color: red;
-        }
-        div.link-desc {
-            color:rgba(255,255,255,.5);
-            font-size: 17px;
-        }
+
+div.navbar-container {
+    position: fixed;
+    width: 100%;
+        z-index: 1;
+
+    button.navbar-toggler {
+        border-color: transparent!important;
+    }
+
+    nav.customBackground {
+        background-color: #343a40;
     }
 }
