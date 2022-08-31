@@ -2,10 +2,20 @@
 div.navbar-container {
     position: fixed;
     width: 100%;
-        z-index: 1;
+    z-index: 1;
 
     button.navbar-toggler {
         border-color: transparent!important;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    div.navbar-collapse {
+        .nav-link {
+            color: rgba(0,0,0,.9);
+            font-weight: 600;
+        }
     }
 
     nav.customBackground {

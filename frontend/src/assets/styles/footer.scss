@@ -1,18 +1,35 @@
 footer.footer-container {
-    height: 200px;
+    overflow: hidden;
+    height: 250px;
 
-    /* @media screen and (max-width: 540px) {
-        height: 290px!important;
-    } */
+    @media screen and (max-width:650px) {
+        height: 300px;
+    }
+    
+    .accordion {
+        .accordion-item {
+            background-color: transparent;
+            border: 0;
 
-    @media screen and (max-width:600px) {
-        div.footer-items-container {
-            div.footer-item {
-                &:nth-child(1) {
-                    margin-bottom: 10px;
-                }
-                &:nth-child(2) {
-                    margin-bottom: 10px;
+            .accordion-header {
+                .accordion-button {
+                    background-color: transparent;
+                    color: white;
+
+                    &:not(.collapsed) {
+                        color: #fff;
+                        background-color: transparent;
+                        box-shadow: none;
+
+                        &:after {
+                            background-image: url('../icons/arrow-up.png');
+                        }
+                    }
+
+                    &::after {
+                        margin-left: 10px;
+                        background-image: url('../icons/arrow-up.png');
+                    }
                 }
             }
         }

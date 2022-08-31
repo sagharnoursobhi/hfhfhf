@@ -4,10 +4,10 @@ div.landing-page-container {
     div.heading-container {
         position: relative;
 
-        /* video {
-            height: 500px;
+        video {
+            height: auto;
             width: 100%;
-        } */
+        }
   
         .heading-desc {
             display: flex;
@@ -19,14 +19,22 @@ div.landing-page-container {
             padding: 20px;
             font-size: 39px;
             top: 50%;
-    
-            @media screen and (max-width: 540px) {
-                font-size: 28px;
+
+            @media screen and (max-width: 674px) {
+                font-size: 30px;
             }
     
             @media screen and (max-width: 540px) {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width: 451px) {
                 font-size: 22px;
             }
+    
+            /* @media screen and (max-width: 540px) {
+                font-size: 22px;
+            } */
         }
         
     }

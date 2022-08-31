@@ -1,4 +1,3 @@
-import React from 'react';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
@@ -9,16 +8,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav} from 'react-bootstrap'
 import '../assets/styles/navbar.scss'
 import Container from 'react-bootstrap/Container';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 
 
-const NavbarHeading = ()=> { 
+const NavbarHeading = ({ heading })=> { 
 
     const [background, setBackground] = useState(false);
 
+    const navigation = useRef();
+
     const changeBackground = () => {
-        if(window.scrollY >= 400) {
+        if(window.scrollY >= heading.current.getBoundingClientRect().bottom) {
             setBackground(true);
         } else {
             setBackground(false);
@@ -30,7 +31,7 @@ const NavbarHeading = ()=> {
     })
 
     return (
-        <div className="navbar-container navbar-heading">
+        <div className="navbar-container navbar-heading" ref={navigation}>
             <Navbar collapseOnSelect expand="lg" variant={background ? 'dark' : 'light'} bg={background ? 'dark' : ''}>
                 <Container>
                     <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center">
