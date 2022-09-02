@@ -12,9 +12,10 @@ import { useState, useEffect } from 'react';
 
 
 
-const NavbarHeading = ({ heading })=> { 
+const NavbarHeading = ({ heading, onFilter })=> { 
 
     const [background, setBackground] = useState(false);
+
 
     const changeBackground = () => {
         if(!heading.current) {
@@ -37,11 +38,11 @@ const NavbarHeading = ({ heading })=> {
         <div className="navbar-container navbar-heading">
             <Navbar collapseOnSelect expand="lg" variant={background ? 'dark' : 'light'} bg={background ? 'dark' : ''}>
                 <Container>
-                    <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center">
-                        <img src={Logo} alt="Logo" className="mx-100"/>
-                        <div className="ml-2">SexyCars</div>
+                    <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center icon-container">
+                        <img src={Logo} alt="Logo" className="mx-100 nav-icon"/>
+                        <div className="ml-2 nav-title">SexyCars</div>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={onFilter} className={`${!background ? '' : 'white-icon'}`}/>
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around" >
                         <Nav className="me-auto align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ml-xl-3 ml-lg-3 mr-xl-3 mr-lg-3 links-container">
                             <Nav.Link as={NavLink}  className={`${background ? 'link' : 'custom-link'}`} to='/'>Home Page</Nav.Link>

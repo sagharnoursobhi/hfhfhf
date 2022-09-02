@@ -18,9 +18,9 @@ const NavbarSecond = ()=> {
             <div className="navbar-container">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navbar-custom-container">
                     <Container>
-                        <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center">
-                            <img src={Logo} alt="Logo" className="mx-100"/>
-                            <div className="ml-2">SexyCars</div>
+                        <Navbar.Brand as={NavLink} to='/' className="d-flex justify-content-center align-items-center icon-container">
+                            <img src={Logo} alt="Logo" className="mx-100 nav-icon"/>
+                            <div className="ml-2 nav-title">SexyCars</div>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll"/>
                         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around">

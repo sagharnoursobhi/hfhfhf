@@ -54,7 +54,7 @@ export default function Landing(){
                 <div className="landing-page-container">
                     <Heading/>
                     <div className="container-fluid" id="main">
-                        <div className={`p-5 ${products.loading ? 'loader-container' : 'cars-container'}`}>
+                        <div className={`pt-2 ${products.loading ? 'loader-container' : 'cars-container'}`}>
                             { content }
                         </div>
                         { numberOfItems < productsLength && <div onClick={ItemsHandler} className="d-flex justify-content-center align-items-center more-btn">

@@ -5,19 +5,52 @@ div.navbar-container {
     width: 100%;
     z-index: 1;
 
-    button.navbar-toggler {
-        border-color: transparent!important;
-        &:focus {
-            box-shadow: none;
+    .icon-container {
+        @media screen and (max-width:550px) {
+            .nav-icon {
+                width: 30px;
+            }
+            .nav-title {
+                font-size: 17px;
+            }
         }
     }
 
-    /* div.navbar-collapse {
-        .nav-link {
-            color: rgba(0,0,0,.9);
-            font-weight: 600;
+    button.navbar-toggler {
+        border-color: transparent!important;
+
+        &:focus {
+            box-shadow: none;
         }
-    } */
+
+        span.navbar-toggler-icon {
+            width: 30px;
+        }
+
+        &:not(.collapsed) {
+            &.white-icon {
+                .navbar-toggler-icon {
+                    background-image: url('../icons/close-button-white.png');
+                }
+            }
+
+            .navbar-toggler-icon {
+                background-image: url('../icons/close-btn.png');
+            }
+        }
+
+        &.collapsed {
+            &.white-icon {
+                .navbar-toggler-icon {
+                    background-image: url('../icons/white-hamburger-icon.png');
+                }
+            }
+
+            .navbar-toggler-icon {
+                background-image: url('../icons/Hamburger-iconpng.png');
+            }
+        }
+    }
 
     nav.customBackground {
         background-color: #343a40;
@@ -25,6 +58,10 @@ div.navbar-container {
 
     .nav-link {
         font-weight: 600;
+
+        @media screen and (max-width: 550px) {
+            font-size: 14px;
+        }
 
         &.custom-link {
             color: $custom-font-color-black;
