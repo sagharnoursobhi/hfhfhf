@@ -1,3 +1,4 @@
+@import '../styles/main.scss';
 
 div.navbar-container {
     position: fixed;
@@ -11,14 +12,26 @@ div.navbar-container {
         }
     }
 
-    div.navbar-collapse {
+    /* div.navbar-collapse {
         .nav-link {
             color: rgba(0,0,0,.9);
             font-weight: 600;
         }
-    }
+    } */
 
     nav.customBackground {
         background-color: #343a40;
+    }
+
+    .nav-link {
+        font-weight: 600;
+
+        &.custom-link {
+            color: $custom-font-color-black;
+        }
+
+        &.link {
+            color: #fff;
+        }
     }
 }

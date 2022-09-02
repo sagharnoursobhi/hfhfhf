@@ -14,6 +14,11 @@ img {
     max-height: 100%;
 }
 
+a {
+    cursor: pointer;
+    list-style:none;
+}
+
 $custom-orange-border: rgb(233, 160, 24);
 
 $custom-font-color-black: rgba(0, 0, 0, 0.774);

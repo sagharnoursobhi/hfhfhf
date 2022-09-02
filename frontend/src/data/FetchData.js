@@ -7,7 +7,7 @@ export function FetchData(url) {
         data:null,
         error:null,
         loading:false
-    })
+    });
 
     useEffect(() => {
 
@@ -16,26 +16,26 @@ export function FetchData(url) {
                 data:null,
                 error:null,
                 loading:true
-            })
+            });
 
             axios.get(url).then(res => {
                 setItems({
                     data:res.data.data,
                     error:null,
                     loading:false
-                })
+                });
             }).catch( () => {
                 setItems({
                     data:null,
                     error:true,
                     loading:false
-                })
-            })
+                });
+            });
         }
 
         fetchData();
 
-    }, [url])
+    }, [url]);
 
     return items;
 }

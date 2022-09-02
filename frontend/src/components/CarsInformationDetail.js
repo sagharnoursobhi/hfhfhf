@@ -79,7 +79,7 @@ export default function CarsInformationDetail() {
                     <div>{result.rentalPrices}</div>
                 </div>
                 <Form className="mt-3 mb-3 rent-form" onSubmit={onSubmithandler}>
-                    <div className="mb-4 d-flex justify-content-start align-items-start">
+                    <div className="mb-4 d-flex justify-content-start align-items-center">
                         <Form.Check name="carInfo" checked={ carInfo === result.carName } type="radio" onChange={(e) => setRentDuration(e.target.value)} value={carInfo}/>
                         <Form.Label className="mb-0 form-title">{ carInfo }</Form.Label>
                     </div>

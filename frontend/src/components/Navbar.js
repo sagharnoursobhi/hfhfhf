@@ -1,4 +1,3 @@
-    import React from 'react';
     import FacebookIcon from '@material-ui/icons/Facebook';
     import InstagramIcon from '@material-ui/icons/Instagram';
     import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
