@@ -11,6 +11,7 @@ import Footer from './Footer';
 import { useState, useEffect } from 'react';
 import ErrorModal from "./ErrorModal";
 import emailjs from 'emailjs-com';
+import { FetchData } from "../data/FetchData";
 
 
 export default function CarsInformationDetail() {
@@ -22,12 +23,27 @@ export default function CarsInformationDetail() {
     const [error, setError] = useState();
     const [rentDuration, setRentDuration] = useState('');
     const [radioError, setRadioError] = useState(false);
+    
 
     const { id } = useParams();
-    let result = data.find((el) => el.id === id);
+    const url = `http://localhost:1337/api/cars/${id}?populate=%2A`;
+    const info = FetchData(url);
+    let content = null;
+    let carInfo = '';
 
-    const [carInfo, setCarInfo] = useState(result.carName);
-    
+    if(info.data) {
+        carInfo = info.data.attributes.carName;
+        content = 
+        <div className="car-info-container">
+            <div><img src={`http://localhost:1337${info.data.attributes.carImage.data.attributes.url}`} alt="" /></div>
+            <div>{info.data.attributes.enginInfo}</div>
+            <div>{info.data.attributes.rentalPrices}</div>
+        </div>;
+    }
+
+    if(info.error) {
+        content = <h1>Not found</h1>
+    }
 
     const onConfirm = () => {
         setError(null);
@@ -73,14 +89,10 @@ export default function CarsInformationDetail() {
         <div className="position-relative">
             <Navbar />
             <div className="page-container">
-                <div className="car-info-container">
-                    <div><img src={result.carImageSrc} alt="" /></div>
-                    <div>{result.enginInfo}</div>
-                    <div>{result.rentalPrices}</div>
-                </div>
+                { content }
                 <Form className="mt-3 mb-3 rent-form" onSubmit={onSubmithandler}>
                     <div className="mb-4 d-flex justify-content-start align-items-center">
-                        <Form.Check name="carInfo" checked={ carInfo === result.carName } type="radio" onChange={(e) => setRentDuration(e.target.value)} value={carInfo}/>
+                        <Form.Check name="carInfo" type="radio" checked={true} onChange={(e) => setRentDuration(e.target.value)} value={carInfo}/>
                         <Form.Label className="mb-0 form-title">{ carInfo }</Form.Label>
                     </div>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -119,7 +131,7 @@ export default function CarsInformationDetail() {
                         <span>Rent the Car</span>
                     </Button>
                 </Form>
-                <Link className="text-info cursor-pointer d-flex justify-content-start align-items-start mt-4" to="/">
+                <Link className="text-info link d-flex justify-content-start align-items-start mt-4" to="/">
                     <ArrowBackIcon/>
                     <span>Back to Home page</span>
                 </Link>

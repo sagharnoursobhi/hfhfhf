@@ -10,12 +10,11 @@ div.title {
 
 div.cars-details-container {
     max-width: 1200px;
+    
     @media screen and (max-width: 900px) {
         max-width: 600px;
     }
-    /* @media screen and (max-width: 414px) {
-        max-width: 400px;
-    } */
+
     margin: 30px auto;
     display: grid;
     grid-template-columns: 1fr;
