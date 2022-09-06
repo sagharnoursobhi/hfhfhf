@@ -23,19 +23,24 @@ div.navbar-container {
             box-shadow: none;
         }
 
-        span.navbar-toggler-icon {
-            width: 30px;
-        }
-
         &:not(.collapsed) {
             &.white-icon {
                 .navbar-toggler-icon {
                     background-image: url('../icons/close-button-white.png');
+                    background-size: 30px;
                 }
             }
 
             .navbar-toggler-icon {
                 background-image: url('../icons/close-btn.png');
+                background-size: 20px;
+            }
+
+            &.nav-black {
+                .navbar-toggler-icon {
+                    background-image: url('../icons/close-button-white.png');
+                    background-size: 30px;
+                }
             }
         }
 
@@ -43,11 +48,19 @@ div.navbar-container {
             &.white-icon {
                 .navbar-toggler-icon {
                     background-image: url('../icons/white-hamburger-icon.png');
+                    background-size: 38px;
                 }
             }
 
             .navbar-toggler-icon {
-                background-image: url('../icons/Hamburger-iconpng.png');
+                background-image: url('../icons/Hamburger-icon-black.png');
+            }
+
+            &.nav-black {
+                .navbar-toggler-icon {
+                    background-image: url('../icons/white-hamburger-icon.png');
+                    background-size: 38px;
+                }
             }
         }
     }

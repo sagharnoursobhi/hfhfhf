@@ -22,7 +22,7 @@ const NavbarSecond = ()=> {
                             <img src={Logo} alt="Logo" className="mx-100 nav-icon"/>
                             <div className="ml-2 nav-title">SexyCars</div>
                         </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="navbarScroll"/>
+                        <Navbar.Toggle aria-controls="navbarScroll" className="nav-black" />
                         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-around">
                             <Nav className="me-auto align-items-xl-center align-items-lg-center align-items-md-start align-items-sm-start ml-xl-3 ml-lg-3 mr-xl-3 mr-lg-3 links-container">
                                 <Nav.Link as={NavLink} className="link" to='/'>Home Page</Nav.Link>
